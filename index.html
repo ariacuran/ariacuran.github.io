@@ -1,0 +1,1253 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>m豆传媒_免费视频观看平台_m豆传媒官方网站入口</title>
+<meta name="description" content="m豆传媒官方网站，提供原创高清视频内容与免费观看入口，覆盖短剧、影像故事与创作者社区，打造值得信赖的精品视频平台。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1b2d'/%3E%3Ccircle cx='24' cy='24' r='6' fill='%23ff5a3c'/%3E%3Ccircle cx='40' cy='40' r='6' fill='%2358d0c0'/%3E%3Cpath d='M14 46 L30 32 L42 44 L52 24' stroke='%23ffffff' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --md-bg:#0c1420;
+  --md-panel:#111c2b;
+  --md-panel-2:#16233a;
+  --md-line:rgba(255,255,255,.09);
+  --md-text:#e8edf5;
+  --md-muted:#92a2b8;
+  --md-flux:#2ee6b8;
+  --md-flux-2:#37a7ff;
+  --md-hot:#ff5a3c;
+  --md-radius:16px;
+  --md-sticky:104px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:var(--md-sticky);}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:
+    radial-gradient(1200px 600px at 85% -10%,rgba(46,230,184,.14),transparent 60%),
+    radial-gradient(900px 500px at 5% 10%,rgba(55,167,255,.13),transparent 55%),
+    var(--md-bg);
+  color:var(--md-text);
+  line-height:1.75;
+  font-size:16px;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+button{font-family:inherit;cursor:pointer;border:none;}
+h1,h2,h3,h4{line-height:1.3;margin:0;}
+p{margin:0 0 14px;}
+ul{margin:0;padding:0;list-style:none;}
+
+/* ============ 公告条 + 页头（吸顶） ============ */
+.md-headwrap{
+  position:sticky;top:0;z-index:120;
+  backdrop-filter:blur(14px);
+  background:rgba(10,17,27,.92);
+  border-bottom:1px solid var(--md-line);
+}
+.md-notice{
+  display:flex;align-items:center;gap:12px;
+  padding:9px clamp(14px,4vw,42px);
+  font-size:13px;
+  background:linear-gradient(90deg,rgba(46,230,184,.16),rgba(55,167,255,.12) 45%,rgba(255,90,60,.12));
+  border-bottom:1px solid var(--md-line);
+  overflow:hidden;
+}
+.md-notice-tag{
+  flex:0 0 auto;font-weight:700;font-size:11px;letter-spacing:1px;
+  background:var(--md-flux);color:#06231c;border-radius:4px;padding:1px 7px;
+}
+.md-notice-track{flex:1 1 auto;min-width:0;color:#cfe0d9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.md-notice-track b{color:var(--md-flux);font-weight:600;}
+.md-notice-more{flex:0 0 auto;font-size:12px;color:var(--md-muted);}
+.md-notice-more:hover{color:var(--md-flux);}
+
+.md-header{
+  display:flex;align-items:center;gap:18px;
+  padding:12px clamp(14px,4vw,42px);
+}
+.md-logo{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+.md-logo-mark{
+  width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(135deg,var(--md-flux),var(--md-flux-2));
+  display:grid;place-items:center;color:#04201a;font-weight:800;font-size:17px;
+  box-shadow:0 6px 18px rgba(46,230,184,.28);
+}
+.md-logo-txt{font-size:18px;font-weight:800;letter-spacing:.5px;}
+.md-logo-txt span{color:var(--md-flux);}
+.md-logo-sub{display:block;font-size:10px;color:var(--md-muted);letter-spacing:2px;font-weight:500;}
+
+.md-nav{display:flex;gap:4px;flex:1 1 auto;flex-wrap:wrap;}
+.md-nav a{
+  padding:7px 13px;border-radius:9px;font-size:14.5px;color:#c3d0e2;
+  transition:.2s;
+}
+.md-nav a:hover{background:rgba(46,230,184,.12);color:var(--md-flux);}
+
+.md-search{
+  flex:0 1 250px;display:flex;align-items:center;gap:8px;
+  background:var(--md-panel-2);border:1px solid var(--md-line);
+  border-radius:10px;padding:7px 12px;min-width:0;
+}
+.md-search input{
+  flex:1 1 auto;min-width:0;background:transparent;border:none;outline:none;
+  color:var(--md-text);font-size:14px;
+}
+.md-search input::placeholder{color:#6f8099;}
+.md-search button{
+  background:transparent;color:var(--md-flux);font-size:13px;font-weight:600;
+}
+.md-search-hint{
+  position:absolute;top:100%;left:0;right:0;margin-top:6px;
+  background:var(--md-panel-2);border:1px solid var(--md-line);border-radius:10px;
+  padding:8px 12px;font-size:13px;color:var(--md-muted);display:none;
+}
+.md-search-wrap{position:relative;flex:0 1 250px;display:flex;}
+.md-search-wrap .md-search{flex:1 1 auto;}
+.md-search-wrap.active .md-search-hint{display:block;}
+
+.md-burger{
+  display:none;background:var(--md-panel-2);border:1px solid var(--md-line);
+  border-radius:9px;color:var(--md-text);padding:8px 11px;font-size:16px;
+}
+
+/* ============ 通用容器 ============ */
+.md-sec{padding:clamp(38px,5vw,66px) clamp(14px,4vw,42px);}
+.md-inner{max-width:1180px;margin:0 auto;}
+.md-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:2px;
+  color:var(--md-flux);text-transform:uppercase;font-weight:600;margin-bottom:12px;
+}
+.md-eyebrow::before{content:"";width:22px;height:2px;background:var(--md-flux);border-radius:2px;}
+.md-h2{font-size:clamp(23px,3vw,32px);font-weight:800;margin-bottom:10px;}
+.md-h2 em{font-style:normal;color:var(--md-flux);}
+.md-lead{color:var(--md-muted);max-width:760px;font-size:15px;}
+.md-h3{font-size:18px;font-weight:700;margin-bottom:8px;}
+.md-h3-sm{font-size:15.5px;font-weight:700;margin-bottom:6px;}
+
+/* ============ 首屏 ============ */
+.md-hero{padding-top:clamp(26px,4vw,52px);}
+.md-hero-grid{
+  display:grid;grid-template-columns:5fr 5fr;gap:clamp(22px,3.4vw,52px);align-items:center;
+}
+.md-hero-copy .md-badge{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;
+  border:1px solid rgba(46,230,184,.4);color:var(--md-flux);
+  padding:5px 12px;border-radius:99px;margin-bottom:18px;font-weight:600;
+}
+.md-hero h1{
+  font-size:clamp(30px,4.6vw,52px);font-weight:900;letter-spacing:-.5px;margin-bottom:16px;
+}
+.md-hero h1 span{
+  background:linear-gradient(100deg,var(--md-flux),var(--md-flux-2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.md-hero-desc{color:#b9c7da;font-size:15.5px;max-width:560px;}
+.md-hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 8px;}
+.md-btn{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:11px;
+  font-size:15px;font-weight:700;transition:.22s;
+}
+.md-btn-main{background:linear-gradient(120deg,var(--md-flux),var(--md-flux-2));color:#04211a;}
+.md-btn-main:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(46,230,184,.32);}
+.md-btn-ghost{border:1px solid rgba(255,255,255,.22);color:var(--md-text);}
+.md-btn-ghost:hover{border-color:var(--md-flux);color:var(--md-flux);}
+
+.md-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px;}
+.md-stat{
+  background:rgba(255,255,255,.04);border:1px solid var(--md-line);border-radius:13px;
+  padding:13px 14px;
+}
+.md-stat b{display:block;font-size:22px;font-weight:800;color:var(--md-flux);line-height:1.2;}
+.md-stat span{font-size:12px;color:var(--md-muted);}
+
+.md-hero-visual{position:relative;}
+.md-hero-visual img{width:100%;border-radius:20px;border:1px solid var(--md-line);box-shadow:0 26px 60px rgba(0,0,0,.5);aspect-ratio:16/12;object-fit:cover;}
+.md-hero-float{
+  position:absolute;left:18px;bottom:18px;right:18px;
+  background:rgba(8,15,24,.82);backdrop-filter:blur(10px);
+  border:1px solid var(--md-line);border-radius:13px;padding:12px 15px;
+  display:flex;align-items:center;gap:12px;font-size:13px;
+}
+.md-hero-float .dot{width:8px;height:8px;border-radius:50%;background:var(--md-hot);box-shadow:0 0 0 4px rgba(255,90,60,.22);flex:0 0 auto;}
+
+/* ============ 关键词解析 ============ */
+.md-parse{background:var(--md-panel);border-top:1px solid var(--md-line);border-bottom:1px solid var(--md-line);}
+.md-parse-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,3vw,34px);}
+.md-parse-block{
+  background:var(--md-panel-2);border:1px solid var(--md-line);border-radius:var(--md-radius);
+  padding:22px 22px 18px;
+}
+.md-parse-block p{font-size:14.6px;color:#c2cede;}
+.md-parse-block .md-h3{color:var(--md-flux);}
+.md-parse-block.wide{grid-column:1/-1;}
+
+/* ============ 视频区 ============ */
+.md-video-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(18px,3vw,34px);align-items:start;}
+.md-feature{
+  background:var(--md-panel);border:1px solid var(--md-line);border-radius:20px;overflow:hidden;
+}
+.md-feature img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.md-feature-body{padding:20px;}
+.md-feature-body .md-h3{font-size:20px;}
+.md-feature-body p{font-size:14.5px;color:var(--md-muted);}
+.md-tagrow{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 14px;}
+.md-tag{
+  font-size:11.5px;padding:2px 9px;border-radius:99px;
+  background:rgba(46,230,184,.12);color:var(--md-flux);border:1px solid rgba(46,230,184,.26);
+}
+.md-tag.blue{background:rgba(55,167,255,.12);color:#71c3ff;border-color:rgba(55,167,255,.28);}
+.md-tag.hot{background:rgba(255,90,60,.12);color:#ff8a72;border-color:rgba(255,90,60,.28);}
+.md-meta{font-size:12.5px;color:#7f90a8;display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+
+.md-vlist{display:flex;flex-direction:column;gap:12px;}
+.md-vitem{
+  display:grid;grid-template-columns:98px minmax(0,1fr);gap:14px;
+  background:var(--md-panel);border:1px solid var(--md-line);border-radius:14px;
+  padding:12px;transition:.22s;
+}
+.md-vitem:hover{border-color:rgba(46,230,184,.4);transform:translateX(3px);}
+.md-vitem-thumb{
+  aspect-ratio:16/10;border-radius:10px;overflow:hidden;background:var(--md-panel-2);
+}
+.md-vitem-thumb img{width:100%;height:100%;object-fit:cover;}
+.md-vitem-body{min-width:0;}
+.md-vitem-body h3{font-size:15px;font-weight:700;margin-bottom:4px;line-height:1.45;}
+.md-vitem-body p{font-size:13px;color:var(--md-muted);margin:0 0 8px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+
+.md-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.md-act{
+  display:inline-flex;align-items:center;gap:5px;font-size:12px;
+  background:rgba(255,255,255,.05);border:1px solid var(--md-line);
+  color:#b6c4d6;padding:4px 10px;border-radius:8px;transition:.18s;
+}
+.md-act:hover{border-color:var(--md-flux);color:var(--md-flux);}
+.md-act.on{color:var(--md-hot);border-color:rgba(255,90,60,.45);background:rgba(255,90,60,.1);}
+.md-act .sym{font-size:13px;line-height:1;}
+
+/* ============ 专题 ============ */
+.md-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.md-topic{
+  background:var(--md-panel);border:1px solid var(--md-line);border-radius:16px;
+  padding:18px;display:flex;flex-direction:column;gap:10px;transition:.22s;
+}
+.md-topic:hover{border-color:rgba(55,167,255,.45);transform:translateY(-3px);}
+.md-topic-status{font-size:11.5px;color:var(--md-flux);letter-spacing:1px;font-weight:600;}
+.md-topic ul{display:flex;flex-direction:column;gap:6px;margin-top:2px;}
+.md-topic li{font-size:13px;color:#a9b8cc;padding-left:14px;position:relative;}
+.md-topic li::before{content:"›";position:absolute;left:0;color:var(--md-flux-2);}
+.md-topic-img{border-radius:11px;overflow:hidden;}
+.md-topic-img img{aspect-ratio:16/9;object-fit:cover;width:100%;}
+
+/* ============ 作者矩阵 ============ */
+.md-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
+.md-author{
+  display:grid;grid-template-columns:64px minmax(0,1fr);gap:15px;
+  background:var(--md-panel);border:1px solid var(--md-line);border-radius:16px;
+  padding:17px;transition:.22s;
+}
+.md-author:hover{border-color:rgba(46,230,184,.42);}
+.md-avatar{
+  width:64px;height:64px;border-radius:50%;display:grid;place-items:center;
+  font-size:21px;font-weight:800;color:#06231c;
+}
+.md-author-info{min-width:0;}
+.md-author-name{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:2px;}
+.md-author-name h3{font-size:15.5px;font-weight:700;}
+.md-author-field{font-size:12px;color:var(--md-flux-2);}
+.md-author-nums{font-size:11.5px;color:#7f90a8;display:flex;gap:12px;margin:4px 0 6px;}
+.md-author-info p{font-size:13px;color:var(--md-muted);margin:0;line-height:1.65;}
+.md-author-btn{
+  font-size:12px;color:var(--md-flux);background:transparent;padding:3px 0;font-weight:600;
+}
+.md-author-btn:hover{text-decoration:underline;}
+
+/* ============ 榜单 / 评价 ============ */
+.md-rank-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.md-rank{
+  background:var(--md-panel);border:1px solid var(--md-line);border-radius:16px;padding:18px;
+}
+.md-rank h3{font-size:15px;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.md-rank h3 .num{font-size:11px;color:#06231c;background:var(--md-flux);border-radius:5px;padding:1px 7px;font-weight:800;}
+.md-rank-list{display:flex;flex-direction:column;gap:9px;}
+.md-rank-list li{
+  display:grid;grid-template-columns:20px minmax(0,1fr) auto;gap:9px;align-items:center;
+  font-size:13px;color:#bccadb;
+}
+.md-rank-list .idx{font-weight:800;color:var(--md-flux);font-size:12.5px;}
+.md-rank-list .title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.md-rank-list .val{font-size:11.5px;color:#7f90a8;}
+
+.md-comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px;}
+.md-comment{
+  background:var(--md-panel);border:1px solid var(--md-line);border-radius:14px;
+  padding:15px 17px;font-size:13.6px;color:#bccadb;
+}
+.md-comment .who{display:flex;align-items:center;gap:9px;margin-bottom:7px;}
+.md-comment .mini-av{
+  width:28px;height:28px;border-radius:50%;display:grid;place-items:center;
+  font-size:12px;font-weight:800;color:#06231c;flex:0 0 auto;
+}
+.md-comment .who b{font-size:13px;color:#e2eaf4;font-weight:700;}
+.md-comment .who span{font-size:11px;color:#71839b;}
+.md-comment p{margin:0;}
+.md-comment .stars{color:#ffc857;font-size:12px;letter-spacing:1px;}
+
+/* ============ 故事 / 随笔 ============ */
+.md-story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
+.md-story{
+  background:linear-gradient(160deg,var(--md-panel-2),var(--md-panel));
+  border:1px solid var(--md-line);border-radius:16px;padding:20px;
+}
+.md-story-tag{font-size:11.5px;color:var(--md-flux-2);letter-spacing:1px;font-weight:600;}
+.md-story h3{font-size:16.5px;margin:5px 0 8px;}
+.md-story p{font-size:13.6px;color:var(--md-muted);margin:0;}
+
+/* ============ 动态 / 合作 ============ */
+.md-dyn-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(18px,3vw,34px);align-items:start;}
+.md-dyn-list{background:var(--md-panel);border:1px solid var(--md-line);border-radius:16px;padding:8px 20px;}
+.md-dyn-item{display:grid;grid-template-columns:78px minmax(0,1fr);gap:14px;padding:14px 0;border-bottom:1px dashed var(--md-line);font-size:13.6px;}
+.md-dyn-item:last-child{border-bottom:none;}
+.md-dyn-date{font-size:12px;color:var(--md-flux);font-weight:600;}
+.md-dyn-item b{display:block;color:#e2eaf4;font-size:14px;margin-bottom:2px;}
+.md-dyn-item span{color:var(--md-muted);font-size:13px;}
+
+.md-brandwall{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.md-brandcard{
+  background:var(--md-panel);border:1px solid var(--md-line);border-radius:13px;
+  padding:14px;font-size:13px;color:#b6c4d6;display:flex;align-items:center;gap:10px;transition:.2s;
+}
+.md-brandcard:hover{border-color:rgba(55,167,255,.5);color:#e2eaf4;}
+.md-brandcard .bx{
+  width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+  font-weight:800;font-size:13px;flex:0 0 auto;color:#04211a;
+}
+
+/* ============ FAQ ============ */
+.md-faq{max-width:900px;margin:0 auto;}
+.md-faq details{
+  background:var(--md-panel);border:1px solid var(--md-line);border-radius:13px;
+  margin-bottom:10px;overflow:hidden;
+}
+.md-faq summary{
+  list-style:none;cursor:pointer;padding:14px 18px;font-size:14.5px;font-weight:600;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.md-faq summary::-webkit-details-marker{display:none;}
+.md-faq summary::after{content:"+";color:var(--md-flux);font-size:19px;font-weight:400;flex:0 0 auto;}
+.md-faq details[open] summary::after{content:"−";}
+.md-faq details[open] summary{color:var(--md-flux);}
+.md-faq .faq-body{padding:0 18px 16px;font-size:13.8px;color:var(--md-muted);}
+
+/* ============ 投稿 CTA ============ */
+.md-cta{
+  background:linear-gradient(120deg,rgba(46,230,184,.16),rgba(55,167,255,.14));
+  border:1px solid rgba(46,230,184,.3);border-radius:20px;
+  padding:clamp(24px,4vw,42px);display:flex;flex-wrap:wrap;align-items:center;gap:22px;justify-content:space-between;
+}
+.md-cta h2{font-size:clamp(20px,2.6vw,27px);margin-bottom:8px;}
+.md-cta p{color:#b9c7da;font-size:14px;margin:0;max-width:640px;}
+
+/* ============ 页脚 ============ */
+.md-footer{border-top:1px solid var(--md-line);background:#091019;padding:clamp(30px,4vw,50px) clamp(14px,4vw,42px) 26px;}
+.md-foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;max-width:1180px;margin:0 auto;}
+.md-foot-brand p{font-size:13px;color:var(--md-muted);margin:10px 0 0;max-width:320px;}
+.md-foot-col h4{font-size:13.5px;margin-bottom:11px;color:#e2eaf4;}
+.md-foot-col a{display:block;font-size:12.8px;color:var(--md-muted);padding:3px 0;}
+.md-foot-col a:hover{color:var(--md-flux);}
+.md-foot-bottom{
+  max-width:1180px;margin:26px auto 0;padding-top:18px;border-top:1px solid var(--md-line);
+  font-size:12px;color:#6f8099;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
+}
+
+/* ============ 弹窗 / Toast ============ */
+.md-modal{
+  position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;
+  background:rgba(3,8,14,.74);padding:18px;
+}
+.md-modal.open{display:flex;}
+.md-modal-box{
+  background:var(--md-panel);border:1px solid var(--md-line);border-radius:18px;
+  max-width:520px;width:100%;padding:24px;position:relative;
+  box-shadow:0 30px 70px rgba(0,0,0,.6);
+}
+.md-modal-box h3{font-size:18px;margin-bottom:10px;color:var(--md-flux);}
+.md-modal-box p{font-size:13.8px;color:var(--md-muted);}
+.md-modal-close{
+  position:absolute;top:12px;right:14px;background:transparent;color:var(--md-muted);font-size:20px;
+}
+.md-modal-close:hover{color:var(--md-hot);}
+.md-modal label{display:block;font-size:12.5px;color:var(--md-muted);margin:12px 0 5px;}
+.md-modal input,.md-modal textarea{
+  width:100%;background:var(--md-panel-2);border:1px solid var(--md-line);border-radius:9px;
+  padding:9px 12px;color:var(--md-text);font-size:13.5px;outline:none;font-family:inherit;
+}
+.md-modal input:focus,.md-modal textarea:focus{border-color:var(--md-flux);}
+.md-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:var(--md-flux);color:#04211a;font-size:13.5px;font-weight:700;
+  padding:11px 20px;border-radius:11px;box-shadow:0 12px 30px rgba(46,230,184,.35);
+  opacity:0;pointer-events:none;transition:.3s;z-index:400;
+}
+.md-toast.show{opacity:1;transform:translate(-50%,0);}
+
+.md-top{
+  position:fixed;right:20px;bottom:26px;z-index:150;
+  width:44px;height:44px;border-radius:13px;
+  background:var(--md-panel-2);border:1px solid var(--md-line);color:var(--md-flux);
+  font-size:17px;display:none;place-items:center;transition:.2s;
+}
+.md-top.show{display:grid;}
+.md-top:hover{border-color:var(--md-flux);}
+
+/* ============ 响应式 ============ */
+@media(max-width:960px){
+  .md-hero-grid{grid-template-columns:1fr;}
+  .md-video-grid{grid-template-columns:1fr;}
+  .md-parse-grid{grid-template-columns:1fr;}
+  .md-topic-grid{grid-template-columns:1fr 1fr;}
+  .md-author-grid{grid-template-columns:1fr;}
+  .md-rank-grid{grid-template-columns:1fr;}
+  .md-comment-grid{grid-template-columns:1fr;}
+  .md-story-grid{grid-template-columns:1fr;}
+  .md-dyn-grid{grid-template-columns:1fr;}
+  .md-foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:780px){
+  .md-nav{
+    display:none;flex-basis:100%;flex-direction:column;
+    padding:10px 0 4px;border-top:1px solid var(--md-line);margin-top:8px;
+  }
+  .md-nav.open{display:flex;}
+  .md-header{flex-wrap:wrap;}
+  .md-search-wrap{order:5;flex-basis:100%;margin-top:6px;}
+  .md-burger{display:block;margin-left:auto;}
+  .md-topic-grid{grid-template-columns:1fr;}
+  .md-stats{grid-template-columns:1fr 1fr;}
+  .md-brandwall{grid-template-columns:1fr;}
+}
+@media(max-width:520px){
+  .md-foot-grid{grid-template-columns:1fr;}
+  .md-stats{grid-template-columns:1fr;}
+  .md-vitem{grid-template-columns:80px minmax(0,1fr);gap:10px;}
+  .md-hero-float{position:static;margin-top:12px;}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头 -->
+<div class="md-headwrap">
+  <div class="md-notice">
+    <span class="md-notice-tag">公告</span>
+    <div class="md-notice-track" aria-live="polite">
+      <b>11-21</b> 冬季短片企划《城市的一天》开放投稿 · <b>11-19</b> m豆传媒免费观看专区新增 46 部原创短剧 · <b>11-16</b> 创作者扶持计划第二期报名启动 · <b>11-12</b> 客户端 3.2 版本上线高清播放与收藏同步
+    </div>
+    <a class="md-notice-more" href="#md-dynamic">全部动态 ›</a>
+  </div>
+  <header class="md-header md-inner">
+    <a class="md-logo" href="#md-top" aria-label="m豆传媒官方网站首页">
+      <span class="md-logo-mark">m</span>
+      <span>
+        <span class="md-logo-txt">m豆<span>传媒</span></span>
+        <span class="md-logo-sub">OFFICIAL VIDEO</span>
+      </span>
+    </a>
+    <nav class="md-nav" id="mdNav" aria-label="主导航">
+      <a href="#md-parse">品牌解析</a>
+      <a href="#md-videos">精品内容</a>
+      <a href="#md-topics">专题企划</a>
+      <a href="#md-authors">创作者</a>
+      <a href="#md-rank">口碑榜单</a>
+      <a href="#md-dynamic">企业动态</a>
+      <a href="#md-faq">帮助中心</a>
+    </nav>
+    <div class="md-search-wrap" id="mdSearchWrap">
+      <form class="md-search" id="mdSearchForm" role="search" onsubmit="return false;">
+        <input type="search" id="mdSearchInput" placeholder="搜索短剧、创作者、专题" aria-label="站内搜索">
+        <button type="submit" id="mdSearchBtn">搜索</button>
+      </form>
+      <div class="md-search-hint" id="mdSearchHint">输入关键词，例如「短剧」「城市」「访谈」</div>
+    </div>
+    <button class="md-burger" id="mdBurger" aria-label="展开导航" aria-expanded="false">☰</button>
+  </header>
+</div>
+
+<main id="md-top">
+
+  <!-- S2 品牌首屏（5:5 大幅图文 + 数据条） -->
+  <section class="md-sec md-hero">
+    <div class="md-inner md-hero-grid">
+      <div class="md-hero-copy">
+        <div class="md-badge">● m豆传媒官方网站 · 免费观看专区已开放</div>
+        <h1>m豆传媒<span>原创高清视频平台</span></h1>
+        <p class="md-hero-desc">
+          作为深耕原创影像领域的视频品牌，m豆传媒官方网站持续运营短剧、纪录影像与人物访谈三大内容线，
+          以正版高清片源和专业创作团队，为观众与企业搭建值得信赖的内容生态。
+          这里是官方发布、创作者成长与社区交流的统一入口。
+        </p>
+        <div class="md-hero-btns">
+          <a class="md-btn md-btn-main" href="#md-videos">▶ 进入免费观看专区</a>
+          <a class="md-btn md-btn-ghost" href="#md-authors">认识创作者</a>
+          <button class="md-btn md-btn-ghost" id="mdSubmitBtn" type="button">✎ 我要投稿</button>
+        </div>
+        <div class="md-stats">
+          <div class="md-stat"><b>3,860+</b><span>原创视频在架</span></div>
+          <div class="md-stat"><b>1,240万</b><span>累计播放人次</span></div>
+          <div class="md-stat"><b>216位</b><span>签约创作者</span></div>
+        </div>
+      </div>
+      <div class="md-hero-visual">
+        <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230d1c2b'/%3E%3Cstop offset='1' stop-color='%2313323c'/%3E%3C/linearGradient%3E%3ClinearGradient id='glow' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232ee6b8'/%3E%3Cstop offset='1' stop-color='%2337a7ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23bg)'/%3E%3Ccircle cx='640' cy='120' r='150' fill='%232ee6b8' opacity='.12'/%3E%3Ccircle cx='120' cy='480' r='180' fill='%2337a7ff' opacity='.12'/%3E%3Crect x='90' y='150' width='620' height='300' rx='18' fill='%230a121c' stroke='%232ee6b8' stroke-opacity='.35' stroke-width='2'/%3E%3Crect x='90' y='150' width='620' height='44' rx='18' fill='%23152536'/%3E%3Ccircle cx='116' cy='172' r='6' fill='%23ff5a3c'/%3E%3Ccircle cx='136' cy='172' r='6' fill='%23ffc857'/%3E%3Ccircle cx='156' cy='172' r='6' fill='%232ee6b8'/%3E%3Crect x='120' y='228' width='250' height='14' rx='7' fill='url(%23glow)' opacity='.8'/%3E%3Crect x='120' y='256' width='380' height='10' rx='5' fill='%23ffffff' opacity='.18'/%3E%3Crect x='120' y='278' width='320' height='10' rx='5' fill='%23ffffff' opacity='.12'/%3E%3Crect x='120' y='330' width='340' height='90' rx='10' fill='%2313243a' stroke='%23ffffff' stroke-opacity='.1'/%3E%3Ccircle cx='270' cy='375' r='26' fill='url(%23glow)'/%3E%3Cpath d='M262 362 L286 375 L262 388 Z' fill='%2304201a'/%3E%3Crect x='500' y='228' width='180' height='192' rx='12' fill='%2313243a' stroke='%23ffffff' stroke-opacity='.1'/%3E%3Crect x='520' y='248' width='80' height='9' rx='4' fill='%23ffffff' opacity='.2'/%3E%3Crect x='520' y='270' width='140' height='9' rx='4' fill='%23ffffff' opacity='.12'/%3E%3Crect x='520' y='292' width='120' height='9' rx='4' fill='%23ffffff' opacity='.12'/%3E%3Crect x='520' y='330' width='140' height='60' rx='8' fill='%232ee6b8' opacity='.2'/%3E%3Crect x='90' y='480' width='170' height='10' rx='5' fill='%23ffffff' opacity='.14'/%3E%3Crect x='280' y='480' width='110' height='10' rx='5' fill='%23ffffff' opacity='.1'/%3E%3Crect x='410' y='480' width='140' height='10' rx='5' fill='%23ffffff' opacity='.1'/%3E%3C/svg%3E"
+             alt="m豆传媒官方网站播放界面主视觉，含播放按钮与内容卡片布局" width="800" height="600" loading="eager">
+        <div class="md-hero-float"><span class="dot"></span>正在直播 · 创作者开放日 第 14 期「十分钟讲清一条短剧的诞生」</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 / M15 关键词解析 -->
+  <section class="md-sec md-parse" id="md-parse">
+    <div class="md-inner">
+      <div class="md-eyebrow">Brand Deep Dive</div>
+      <h2 class="md-h2">关于 m豆传媒：一个<em>免费观看</em>与原创品质并重的视频品牌</h2>
+      <p class="md-lead">
+        很多用户在搜索 m豆传媒相关入口时，最关心的其实是三件事：内容是否正版高清、观看门槛是否友好、平台是否长期稳定运营。
+        这一部分从品牌定位、内容体系与社区机制三个角度，讲清楚 m豆传媒官方网站的运营逻辑。
+      </p>
+      <div class="md-parse-grid" style="margin-top:26px;">
+        <div class="md-parse-block">
+          <h3 class="md-h3">一、品牌定位：免费不等于低质，高清正版是底线</h3>
+          <p>
+            m豆传媒自建立起就把自己定义为“面向大众的原创影像品牌”，而不是一个单纯的聚合播放器。所谓免费观看专区，
+            指的是平台将自有版权与签约创作者授权的片源，通过官方网站、客户端等官方渠道开放给用户观看，
+            不设付费墙、不做诱导跳转，也不依赖第三方资源转链。对普通观众而言，这意味着打开页面就能直接看到完整内容；
+            对创作者而言，这意味着作品有稳定的官方分发位，不必担心被随意搬运。
+          </p>
+          <p>
+            在画质上，平台主力片源统一提供 1080P 高清版本，重点企划提供更高码率选项，并对老旧片源做定期重制。
+            我们坚持“正版”二字，所有上线内容均可追溯到创作者授权协议，官方发布页面会同步标注片源归属与上线时间。
+            这也是为什么很多用户把 m豆传媒当作行业里相对值得信赖的免费视频入口——它把“能看”与“看得放心”放在同一层级上讨论。
+          </p>
+        </div>
+        <div class="md-parse-block">
+          <h3 class="md-h3">二、内容体系：三条主线撑起内容生态</h3>
+          <p>
+            目前平台的内容主要由三条主线构成。第一条是短剧线，单集 3 至 8 分钟，强调叙事效率与生活质感，
+            题材覆盖职场、家庭、情感与轻喜剧，也是免费观看专区更新最频繁的部分。
+            第二条是纪录影像线，以城市探索、在地文化与手艺人故事为主，更新节奏慢但制作周期长，
+            是平台建立专业口碑的关键。第三条是访谈线，围绕创作者、行业从业者与普通观众展开，
+            用真实对话补充影像之外的视角。
+          </p>
+          <p>
+            三条线并不是彼此孤立的。一条短剧上线后，往往会配套一支幕后花絮、一篇创作者自述，以及一次社区问答，
+            形成“作品—人物—讨论”的完整链条。这种结构让 m豆传媒的内容生态具备自我循环能力：
+            观众因为一部剧留下，又因为认识创作者而持续回访。对品牌方来说，这种结构也更容易承载商业合作，
+            因为每一次合作都能嵌入到具体的内容语境中，而不是硬贴片头广告。
+          </p>
+        </div>
+        <div class="md-parse-block wide">
+          <h3 class="md-h3">三、社区机制：让“免费观看”变成可持续的陪伴</h3>
+          <p>
+            免费观看要持续，靠的不是单次流量，而是社区留存。m豆传媒在机制上做了几件比较“笨”的事：
+            第一，坚持每一部作品都开放评论区，创作者本人需要在一定周期内回复高赞评论；
+            第二，设立创作者扶持计划，把部分商业合作收益按比例反哺给内容团队；
+            第三，每季度举办一次公开的创意挑战与投票活动，选题由社区提名、由观众投票决定。
+            这三件事看起来都不直接产生收入，但它们共同构成了平台的信任基础。
+          </p>
+          <p>
+            从数据上看，这种机制带来的效果是播放完成率与回访率的同步提升。用户不再只是“看完就走”，
+            而会主动收藏专题、关注创作者、在评论区留下自己的城市故事。平台把这些真实反馈整理成内容运营的参考，
+            再反哺到下一季的选题会上。我们始终认为，一个视频品牌真正的护城河不是片库规模，
+            而是观众愿不愿意把这里当成日常会打开的地方。m豆传媒官方网站会继续围绕这一点持续运营，
+            把免费、高清、原创、社区四件事做扎实，让每一次打开页面都值得期待。
+          </p>
+          <p>
+            此外，平台在未成年人保护、版权投诉与内容分级上也设有明确流程：所有上线内容需经过双人审核，
+            涉及敏感题材的作品会标注适龄提示；版权方可通过官方渠道提交下架申请，平均处理周期为三个工作日。
+            这些看似基础的工作，恰恰是“值得信赖”四个字的实际内容，也是我们在行业观察中反复强调的部分。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 / M2+M3 精品内容（一幅重点大图 + 文字列表） -->
+  <section class="md-sec" id="md-videos">
+    <div class="md-inner">
+      <div class="md-eyebrow">Featured &amp; Latest</div>
+      <h2 class="md-h2">m豆传媒<em>精品内容</em>：本期重点推荐与最新上线</h2>
+      <p class="md-lead">重点条目配封面，其余以文字索引呈现，方便快速判断是否值得点开。所有条目均可加入收藏与点赞。</p>
+
+      <div class="md-video-grid" style="margin-top:26px;">
+        <article class="md-feature">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231a2c40'/%3E%3Cstop offset='1' stop-color='%230c1a26'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23a)'/%3E%3Cpath d='M0 300 L120 220 L230 268 L360 180 L480 240 L640 150 L640 360 L0 360 Z' fill='%232ee6b8' opacity='.14'/%3E%3Crect x='48' y='58' width='250' height='12' rx='6' fill='%232ee6b8' opacity='.75'/%3E%3Crect x='48' y='84' width='180' height='10' rx='5' fill='%23ffffff' opacity='.25'/%3E%3Crect x='48' y='120' width='200' height='130' rx='12' fill='%2313243a' stroke='%23ffffff' stroke-opacity='.14'/%3E%3Ccircle cx='148' cy='185' r='30' fill='%23ffffff' opacity='.14'/%3E%3Cpath d='M138 170 L166 185 L138 200 Z' fill='%23ffffff' opacity='.8'/%3E%3Crect x='290' y='120' width='300' height='130' rx='12' fill='%2313243a' stroke='%23ffffff' stroke-opacity='.12'/%3E%3Crect x='312' y='142' width='140' height='9' rx='4' fill='%23ffffff' opacity='.22'/%3E%3Crect x='312' y='164' width='220' height='8' rx='4' fill='%23ffffff' opacity='.12'/%3E%3Crect x='312' y='184' width='180' height='8' rx='4' fill='%23ffffff' opacity='.12'/%3E%3Crect x='312' y='210' width='90' height='20' rx='10' fill='%232ee6b8' opacity='.35'/%3E%3Crect x='48' y='272' width='120' height='9' rx='4' fill='%23ffffff' opacity='.16'/%3E%3Crect x='186' y='272' width='90' height='9' rx='4' fill='%23ffffff' opacity='.12'/%3E%3C/svg%3E"
+               alt="m豆传媒重点推荐短剧《城市的一天》封面，播放按钮与分镜卡片" width="640" height="360" loading="lazy">
+          <div class="md-feature-body">
+            <div class="md-tagrow">
+              <span class="md-tag hot">本期焦点</span>
+              <span class="md-tag">短剧</span>
+              <span class="md-tag blue">免费观看</span>
+            </div>
+            <h3 class="md-h3">城市的一天：十二个普通人，十二段被剪进镜头的日常</h3>
+            <p>
+              这是冬季企划的首发作品，六个拍摄小组在同一座城市的不同角落记录了一整天。
+              从凌晨四点的早餐铺到深夜十一点的末班车，没有旁白，只有环境声与人物自己的讲述。
+              全片 42 分钟，官方页面开放完整版免费观看，并附带导演自述与拍摄手记。
+            </p>
+            <div class="md-meta">
+              <span>导演：林泊</span><span>播放 28.6 万</span><span>点赞 1.9 万</span><span>收藏 7,320</span>
+            </div>
+            <div class="md-actions">
+              <button class="md-act" type="button" data-like>♥ 点赞 <span data-count>19200</span></button>
+              <button class="md-act" type="button" data-fav>☆ 收藏</button>
+              <button class="md-act" type="button" data-comment>评论</button>
+              <button class="md-act" type="button" data-copy>复制链接</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="md-vlist">
+          <article class="md-vitem">
+            <div class="md-vitem-thumb">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 100'%3E%3Crect width='160' height='100' fill='%2313243a'/%3E%3Ccircle cx='42' cy='44' r='20' fill='%232ee6b8' opacity='.6'/%3E%3Crect x='74' y='30' width='60' height='8' rx='4' fill='%23ffffff' opacity='.28'/%3E%3Crect x='74' y='48' width='44' height='7' rx='3' fill='%23ffffff' opacity='.16'/%3E%3Crect x='20' y='76' width='120' height='7' rx='3' fill='%23ffffff' opacity='.12'/%3E%3C/svg%3E"
+                   alt="短剧《加班的第七种理由》封面插画" width="160" height="100" loading="lazy">
+            </div>
+            <div class="md-vitem-body">
+              <h3>加班的第七种理由：一部关于职场日常的 6 分钟短剧</h3>
+              <p>会议室、外卖单、深夜写字楼的灯。用轻喜剧方式讲一个大家都熟悉却很少被认真拍下来的场景。剧本来自创作者投稿，官方团队完成拍摄。</p>
+              <div class="md-tagrow">
+                <span class="md-tag">职场日常</span><span class="md-tag blue">原创</span>
+              </div>
+              <div class="md-actions">
+                <button class="md-act" type="button" data-like>♥ <span data-count>8460</span></button>
+                <button class="md-act" type="button" data-fav>☆ 收藏</button>
+                <button class="md-act" type="button" data-comment>评论</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="md-vitem">
+            <div class="md-vitem-thumb">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 100'%3E%3Crect width='160' height='100' fill='%230f1e2c'/%3E%3Cpath d='M0 78 L40 58 L72 70 L110 44 L160 60 L160 100 L0 100 Z' fill='%2337a7ff' opacity='.22'/%3E%3Ccircle cx='118' cy='30' r='14' fill='%23ffc857' opacity='.7'/%3E%3Crect x='16' y='20' width='60' height='7' rx='3' fill='%23ffffff' opacity='.24'/%3E%3Crect x='16' y='36' width='40' height='6' rx='3' fill='%23ffffff' opacity='.14'/%3E%3C/svg%3E"
+                   alt="纪录影像《沿河而下》封面插画，山线与日光" width="160" height="100" loading="lazy">
+            </div>
+            <div class="md-vitem-body">
+              <h3>沿河而下：三位船工与一条河的二十年</h3>
+              <p>纪录影像线新作。摄制组沿着河道走了十一天，记录船工的生活节奏与河流的变化。画面克制，访谈扎实，适合安静地看完整段。</p>
+              <div class="md-tagrow">
+                <span class="md-tag">在地文化</span><span class="md-tag blue">高清</span>
+              </div>
+              <div class="md-actions">
+                <button class="md-act" type="button" data-like>♥ <span data-count>6120</span></button>
+                <button class="md-act" type="button" data-fav>☆ 收藏</button>
+                <button class="md-act" type="button" data-comment>评论</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="md-vitem">
+            <div class="md-vitem-thumb">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 100'%3E%3Crect width='160' height='100' fill='%23142230'/%3E%3Crect x='24' y='24' width='46' height='52' rx='8' fill='%23ff5a3c' opacity='.35'/%3E%3Crect x='84' y='34' width='52' height='10' rx='5' fill='%23ffffff' opacity='.24'/%3E%3Crect x='84' y='52' width='40' height='8' rx='4' fill='%23ffffff' opacity='.14'/%3E%3Crect x='84' y='68' width='30' height='8' rx='4' fill='%23ffffff' opacity='.12'/%3E%3C/svg%3E"
+                   alt="访谈节目《镜前十分钟》封面插画，主持人与嘉宾对话" width="160" height="100" loading="lazy">
+            </div>
+            <div class="md-vitem-body">
+              <h3>镜前十分钟：和一位剪辑师聊他删掉的 200 个镜头</h3>
+              <p>访谈线常驻节目。这一期嘉宾是一位入行八年的剪辑师，聊素材取舍、节奏判断，以及“为什么好的作品总要删掉一些自己很爱的东西”。</p>
+              <div class="md-tagrow">
+                <span class="md-tag">人物访谈</span><span class="md-tag blue">创作幕后</span>
+              </div>
+              <div class="md-actions">
+                <button class="md-act" type="button" data-like>♥ <span data-count>5390</span></button>
+                <button class="md-act" type="button" data-fav>☆ 收藏</button>
+                <button class="md-act" type="button" data-comment>评论</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="md-vitem">
+            <div class="md-vitem-thumb">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 100'%3E%3Crect width='160' height='100' fill='%23101d2a'/%3E%3Ccircle cx='50' cy='50' r='24' fill='none' stroke='%232ee6b8' stroke-width='3' opacity='.7'/%3E%3Ccircle cx='50' cy='50' r='9' fill='%232ee6b8' opacity='.7'/%3E%3Crect x='90' y='34' width='50' height='8' rx='4' fill='%23ffffff' opacity='.2'/%3E%3Crect x='90' y='52' width='36' height='7' rx='3' fill='%23ffffff' opacity='.13'/%3E%3C/svg%3E"
+                   alt="手作系列《一只杯子的三十道工序》封面插画" width="160" height="100" loading="lazy">
+            </div>
+            <div class="md-vitem-body">
+              <h3>一只杯子的三十道工序：手作人老周的一天</h3>
+              <p>手作题材纪录短片。从揉泥到入窑，镜头跟着老周的手走。没有刻意煽情，只把过程拍清楚，看完会明白“匠心”不是形容词。</p>
+              <div class="md-tagrow">
+                <span class="md-tag">手作DIY</span><span class="md-tag blue">生活影像</span>
+              </div>
+              <div class="md-actions">
+                <button class="md-act" type="button" data-like>♥ <span data-count>4720</span></button>
+                <button class="md-act" type="button" data-fav>☆ 收藏</button>
+                <button class="md-act" type="button" data-comment>评论</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- M4 专题企划 -->
+  <section class="md-sec" id="md-topics" style="background:var(--md-panel);border-top:1px solid var(--md-line);border-bottom:1px solid var(--md-line);">
+    <div class="md-inner">
+      <div class="md-eyebrow">Series &amp; Campaigns</div>
+      <h2 class="md-h2">专题企划：m豆传媒<em>持续运营</em>的内容栏目</h2>
+      <p class="md-lead">每个专题都有明确的更新节律与投稿入口，观众可以按兴趣追踪，创作者可以按栏目投递。</p>
+      <div class="md-topic-grid" style="margin-top:26px;">
+        <article class="md-topic">
+          <div class="md-topic-status">● 更新中 · 每周四上线</div>
+          <h3 class="md-h3">城市的一天</h3>
+          <div class="md-topic-img">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%230e1c2a'/%3E%3Crect x='20' y='110' width='30' height='50' fill='%232ee6b8' opacity='.3'/%3E%3Crect x='60' y='86' width='30' height='74' fill='%232ee6b8' opacity='.24'/%3E%3Crect x='100' y='120' width='30' height='40' fill='%2337a7ff' opacity='.3'/%3E%3Crect x='140' y='70' width='30' height='90' fill='%2337a7ff' opacity='.22'/%3E%3Crect x='180' y='100' width='30' height='60' fill='%232ee6b8' opacity='.2'/%3E%3Ccircle cx='252' cy='56' r='24' fill='%23ffc857' opacity='.5'/%3E%3C/svg%3E"
+                 alt="专题《城市的一天》封面插画，城市天际线与夕阳" width="320" height="180" loading="lazy">
+          </div>
+          <p style="font-size:13.6px;color:var(--md-muted);margin:0;">以一天为时间单位，记录不同城市里普通人的生活切片，强调真实与陪伴感。</p>
+          <ul>
+            <li>第 12 期：凌晨四点的早餐铺</li>
+            <li>第 11 期：一位公交司机的末班车</li>
+            <li>第 10 期：医院走廊里的守夜人</li>
+          </ul>
+        </article>
+
+        <article class="md-topic">
+          <div class="md-topic-status">● 征集中 · 12 月 20 日截止</div>
+          <h3 class="md-h3">十分钟讲清楚</h3>
+          <p style="font-size:13.6px;color:var(--md-muted);margin:0;">面向创作者的知识类栏目，用十分钟以内的篇幅把一件专业的事讲明白，脚本需自带结构。</p>
+          <ul>
+            <li>已上线：如何判断一条镜头的节奏</li>
+            <li>已上线：录音棚里的三种降噪思路</li>
+            <li>征集中：如何给短剧写一句好台词</li>
+          </ul>
+        </article>
+
+        <article class="md-topic">
+          <div class="md-topic-status">● 已完结 · 可完整回看</div>
+          <h3 class="md-h3">镜前十分钟</h3>
+          <p style="font-size:13.6px;color:var(--md-muted);margin:0;">访谈类专题第一季，共 14 期，围绕创作幕后与行业观察展开，是平台专业口碑的代表栏目。</p>
+          <ul>
+            <li>第 14 期：制片人聊预算与妥协</li>
+            <li>第 13 期：摄影指导聊光线</li>
+            <li>第 12 期：编剧聊人物动机</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 / M5 创作者矩阵（双列简介） -->
+  <section class="md-sec" id="md-authors">
+    <div class="md-inner">
+      <div class="md-eyebrow">Creators</div>
+      <h2 class="md-h2">m豆传媒<em>创作者</em>矩阵：平台上的四张面孔</h2>
+      <p class="md-lead">平台签约与特邀创作者，覆盖短剧、纪录、访谈与生活影像四个方向。点击可查看简介。</p>
+      <div class="md-author-grid" style="margin-top:26px;">
+        <article class="md-author">
+          <div class="md-avatar" style="background:linear-gradient(135deg,#2ee6b8,#37a7ff);">林</div>
+          <div class="md-author-info">
+            <div class="md-author-name"><h3>林泊</h3><span class="md-author-field">短剧 · 导演</span></div>
+            <div class="md-author-nums"><span>作品 46</span><span>粉丝 12.8 万</span></div>
+            <p>擅长把日常场景拍出叙事张力，作品《城市的一天》《加班的第七种理由》均在平台获得高完播率。习惯先写人物再写情节，主张“短剧不是压缩的长剧，而是另一种讲述单位”。</p>
+            <button class="md-author-btn" type="button" data-author="林泊，短剧导演，代表作《城市的一天》。习惯先写人物再写情节，强调短剧应有独立的叙事节奏。">查看简介 ›</button>
+          </div>
+        </article>
+
+        <article class="md-author">
+          <div class="md-avatar" style="background:linear-gradient(135deg,#ffc857,#ff5a3c);">周</div>
+          <div class="md-author-info">
+            <div class="md-author-name"><h3>周砚秋</h3><span class="md-author-field">纪录影像 · 摄影</span></div>
+            <div class="md-author-nums"><span>作品 31</span><span>粉丝 9.4 万</span></div>
+            <p>长期拍摄河流、船工与手艺人的题材，镜头克制，偏好自然光与长镜头。认为纪录影像的价值在于“不急着下结论”，希望观众看完能自己想一想。</p>
+            <button class="md-author-btn" type="button" data-author="周砚秋，纪录影像摄影师，长期关注河流与手艺题材，偏好自然光与长镜头，强调克制的表达。">查看简介 ›</button>
+          </div>
+        </article>
+
+        <article class="md-author">
+          <div class="md-avatar" style="background:linear-gradient(135deg,#b28bff,#37a7ff);">苏</div>
+          <div class="md-author-info">
+            <div class="md-author-name"><h3>苏禾</h3><span class="md-author-field">人物访谈 · 主持</span></div>
+            <div class="md-author-nums"><span>作品 58</span><span>粉丝 15.2 万</span></div>
+            <p>《镜前十分钟》常驻主持，提问温和但直接，擅长把专业问题拆成观众听得懂的话。采访前会读完全部资料，坚持“不靠追问制造情绪”。</p>
+            <button class="md-author-btn" type="button" data-author="苏禾，人物访谈主持人，《镜前十分钟》常驻主持，提问风格温和直接，反对以追问制造情绪。">查看简介 ›</button>
+          </div>
+        </article>
+
+        <article class="md-author">
+          <div class="md-avatar" style="background:linear-gradient(135deg,#58d0c0,#b28bff);">陈</div>
+          <div class="md-author-info">
+            <div class="md-author-name"><h3>陈栗</h3><span class="md-author-field">生活影像 · 剪辑</span></div>
+            <div class="md-author-nums"><span>作品 39</span><span>粉丝 7.6 万</span></div>
+            <p>专注手作、咖啡与家居收纳类生活影像，剪辑节奏轻快，画面干净。相信“好内容不需要太多解释”，偏爱用声音和细节替代旁白。</p>
+            <button class="md-author-btn" type="button" data-author="陈栗，生活影像剪辑师，擅长手作与家居题材，剪辑节奏轻快，偏好用环境声与细节替代旁白。">查看简介 ›</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M6 故事随笔 + M14 口碑榜单 -->
+  <section class="md-sec" id="md-rank" style="background:var(--md-panel);border-top:1px solid var(--md-line);border-bottom:1px solid var(--md-line);">
+    <div class="md-inner">
+      <div class="md-eyebrow">Voices &amp; Ranking</div>
+      <h2 class="md-h2">口碑与故事：m豆传媒<em>值得信赖</em>的社区回声</h2>
+      <p class="md-lead">榜单来自平台真实播放与收藏数据，故事来自观众与创作者的真实投稿。</p>
+
+      <div class="md-story-grid" style="margin-top:24px;">
+        <article class="md-story">
+          <div class="md-story-tag">观众故事</div>
+          <h3>「我把一条短剧看了三遍，因为那是我妈的一天」</h3>
+          <p>一位观众在《城市的一天》评论区写下这段话。她说自己在外地工作，很久没回家，看到早餐铺那一段时突然哭了。平台把这条评论置顶了整整一周。</p>
+        </article>
+        <article class="md-story">
+          <div class="md-story-tag">创作者手记</div>
+          <h3>「删掉 200 个镜头之后，片子才真的开始呼吸」</h3>
+          <p>林泊在拍摄手记里复盘了冬季企划的剪辑过程。他提到最难的不是拍，而是承认某些很美的镜头对故事没有帮助。这篇文章后来被多家行业媒体转载。</p>
+        </article>
+      </div>
+
+      <div class="md-rank-grid" style="margin-top:26px;">
+        <div class="md-rank">
+          <h3><span class="num">热度</span>本周热播榜</h3>
+          <ul class="md-rank-list">
+            <li><span class="idx">1</span><span class="title">城市的一天</span><span class="val">28.6万</span></li>
+            <li><span class="idx">2</span><span class="title">加班的第七种理由</span><span class="val">21.3万</span></li>
+            <li><span class="idx">3</span><span class="title">沿河而下</span><span class="val">18.9万</span></li>
+            <li><span class="idx">4</span><span class="title">镜前十分钟 · 剪辑师</span><span class="val">15.1万</span></li>
+            <li><span class="idx">5</span><span class="title">一只杯子的三十道工序</span><span class="val">12.7万</span></li>
+          </ul>
+        </div>
+        <div class="md-rank">
+          <h3><span class="num">新人</span>创作者上升榜</h3>
+          <ul class="md-rank-list">
+            <li><span class="idx">1</span><span class="title">阿杏（生活影像）</span><span class="val">+3.2万</span></li>
+            <li><span class="idx">2</span><span class="title">老麦（美食烹饪）</span><span class="val">+2.7万</span></li>
+            <li><span class="idx">3</span><span class="title">小满（亲子成长）</span><span class="val">+2.1万</span></li>
+            <li><span class="idx">4</span><span class="title">程野（户外活动）</span><span class="val">+1.8万</span></li>
+            <li><span class="idx">5</span><span class="title">十九（音乐现场）</span><span class="val">+1.5万</span></li>
+          </ul>
+        </div>
+        <div class="md-rank">
+          <h3><span class="num">口碑</span>高分收藏榜</h3>
+          <ul class="md-rank-list">
+            <li><span class="idx">1</span><span class="title">沿河而下</span><span class="val">9.6</span></li>
+            <li><span class="idx">2</span><span class="title">城市的一天</span><span class="val">9.5</span></li>
+            <li><span class="idx">3</span><span class="title">手作人老周</span><span class="val">9.3</span></li>
+            <li><span class="idx">4</span><span class="title">镜前十分钟 · 制片人</span><span class="val">9.1</span></li>
+            <li><span class="idx">5</span><span class="title">凌晨四点的早餐铺</span><span class="val">8.9</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="md-comment-grid">
+        <div class="md-comment">
+          <div class="who"><span class="mini-av" style="background:linear-gradient(135deg,#2ee6b8,#37a7ff);">顾</span><b>顾南</b><span>11-20</span><span class="stars">★★★★★</span></div>
+          <p>“城市的一天”是我今年看过最舒服的纪录短片，没有刻意升华，但看完心里很满。希望能出第二季。</p>
+        </div>
+        <div class="md-comment">
+          <div class="who"><span class="mini-av" style="background:linear-gradient(135deg,#ffc857,#ff5a3c);">沈</span><b>沈三</b><span>11-19</span><span class="stars">★★★★☆</span></div>
+          <p>剪辑节奏很好，但有两段访谈音量偏小，建议官方把音频再统一处理一下。</p>
+        </div>
+        <div class="md-comment">
+          <div class="who"><span class="mini-av" style="background:linear-gradient(135deg,#b28bff,#37a7ff);">阿</span><b>阿杏</b><span>11-18</span><span class="stars">★★★★★</span></div>
+          <p>作为刚签约的新人，最感动的是平台真的会回复评论。我第一条作品的问题，编辑写了两百多字帮我分析。</p>
+        </div>
+        <div class="md-comment">
+          <div class="who"><span class="mini-av" style="background:linear-gradient(135deg,#58d0c0,#b28bff);">木</span><b>木子李</b><span>11-17</span><span class="stars">★★★★☆</span></div>
+          <p>免费观看专区片源挺全，画质也稳定。就是希望能按题材做更细的筛选，现在找手作类要翻很久。</p>
+        </div>
+        <div class="md-comment">
+          <div class="who"><span class="mini-av" style="background:linear-gradient(135deg,#ff5a3c,#ffc857);">郑</span><b>郑一鸣</b><span>11-15</span><span class="stars">★★★★★</span></div>
+          <p>《一只杯子的三十道工序》拍得很扎实，看完直接去看了一遍完整的制作流程。这种内容值得被更多人看到。</p>
+        </div>
+        <div class="md-comment">
+          <div class="who"><span class="mini-av" style="background:linear-gradient(135deg,#37a7ff,#58d0c0);">林</span><b>林晓</b><span>11-14</span><span class="stars">★★★★☆</span></div>
+          <p>访谈节目质量在线，苏禾的提问不抢嘉宾风头，这点很难得。希望多出一些幕后岗位的采访。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 企业动态 + 合作品牌 -->
+  <section class="md-sec" id="md-dynamic">
+    <div class="md-inner">
+      <div class="md-eyebrow">News &amp; Partners</div>
+      <h2 class="md-h2">企业动态与合作伙伴：m豆传媒<em>官方发布</em></h2>
+      <div class="md-dyn-grid" style="margin-top:24px;">
+        <div class="md-dyn-list">
+          <div class="md-dyn-item">
+            <div class="md-dyn-date">2026-11-21</div>
+            <div><b>冬季短片企划《城市的一天》开放投稿</b><span>面向全平台创作者征集城市题材短剧与纪录片段，入选作品将获得官方分发位与制作支持。</span></div>
+          </div>
+          <div class="md-dyn-item">
+            <div class="md-dyn-date">2026-11-19</div>
+            <div><b>免费观看专区新增 46 部原创短剧</b><span>本期上架内容覆盖职场、家庭、情感与轻喜剧四类，全部为 1080P 高清正版片源。</span></div>
+          </div>
+          <div class="md-dyn-item">
+            <div class="md-dyn-date">2026-11-16</div>
+            <div><b>创作者扶持计划第二期报名启动</b><span>本期提供 20 个名额，包含设备支持、脚本辅导与商业合作对接，报名截止 12 月 20 日。</span></div>
+          </div>
+          <div class="md-dyn-item">
+            <div class="md-dyn-date">2026-11-12</div>
+            <div><b>客户端 3.2 版本上线</b><span>新增高清播放模式、收藏跨端同步与评论折叠功能，官方页面同步更新使用说明。</span></div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="md-h3-sm" style="color:#b9c7da;margin-bottom:12px;">合作品牌与伙伴</h3>
+          <div class="md-brandwall">
+            <div class="md-brandcard"><span class="bx" style="background:#2ee6b8;">光</span>光野影像器材</div>
+            <div class="md-brandcard"><span class="bx" style="background:#37a7ff;">城</span>城市文化发展基金</div>
+            <div class="md-brandcard"><span class="bx" style="background:#ffc857;">声</span>声场录音工作室</div>
+            <div class="md-brandcard"><span class="bx" style="background:#b28bff;">纸</span>纸页独立出版</div>
+            <div class="md-brandcard"><span class="bx" style="background:#ff5a3c;">幕</span>幕间影视后期</div>
+            <div class="md-brandcard"><span class="bx" style="background:#58d0c0;">行</span>行野户外</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 FAQ + 投稿 CTA -->
+  <section class="md-sec" id="md-faq" style="background:var(--md-panel);border-top:1px solid var(--md-line);">
+    <div class="md-inner">
+      <div class="md-eyebrow">Help Center</div>
+      <h2 class="md-h2" style="text-align:center;">m豆传媒<em>常见问题</em>与投稿指引</h2>
+      <p class="md-lead" style="text-align:center;margin:0 auto 26px;">关于免费观看、画质、投稿与版权，这里有最直接的答案。</p>
+      <div class="md-faq">
+        <details open>
+          <summary>免费观看专区需要注册或以什么方式登录吗？</summary>
+          <div class="faq-body">不需要付费，也不强制登录即可观看大部分片源。登录后可同步收藏与观看记录，并在评论区参与讨论。所有官方入口均通过 m豆传媒官方网站与客户端提供。</div>
+        </details>
+        <details>
+          <summary>平台片源是否为正版高清？</summary>
+          <div class="faq-body">是。平台上架的原创内容均来自自有版权或签约创作者授权，主力片源为 1080P 高清版本，并在详情页标注片源归属与上线时间。若发现侵权内容，可通过官方渠道提交投诉。</div>
+        </details>
+        <details>
+          <summary>我可以向平台投稿自己的作品吗？</summary>
+          <div class="faq-body">可以。页面提供投稿入口，提交作品简介、时长与题材即可。平台每周集中审看一次，通过后会由编辑联系沟通后续上线与授权事宜。</div>
+        </details>
+        <details>
+          <summary>投稿作品有题材或时长限制吗？</summary>
+          <div class="faq-body">短剧单集建议 3 至 8 分钟，纪录影像单集不超过 45 分钟，访谈类建议控制在 20 分钟以内。题材不限，但需符合内容规范，涉及敏感题材请在投稿时注明。</div>
+        </details>
+        <details>
+          <summary>创作者扶持计划如何参与？</summary>
+          <div class="faq-body">每期在官方页面开放报名，需提交过往作品与本期计划。入选后可获得设备支持、脚本辅导与商业合作对接，具体名额与时间以当期公告为准。</div>
+        </details>
+        <details>
+          <summary>为什么有些内容需要标注适龄提示？</summary>
+          <div class="faq-body">平台对所有上线内容执行双人审核，涉及复杂社会议题或情绪强度较高的作品会标注适龄提示，目的是帮助观众在观看前做出判断。</div>
+        </details>
+        <details>
+          <summary>收藏与点赞数据会跨端同步吗？</summary>
+          <div class="faq-body">会。登录同一账号后，网页端与客户端的行为数据会同步。若出现不同步，可在设置中手动刷新一次同步状态。</div>
+        </details>
+        <details>
+          <summary>如何联系企业合作或媒体采访？</summary>
+          <div class="faq-body">可通过官方页面的联系入口提交需求，注明合作类型与时间安排。商务与媒体需求会在三个工作日内收到回复。</div>
+        </details>
+      </div>
+
+      <div class="md-cta" style="margin-top:32px;">
+        <div>
+          <h2>把你的作品，放进 m豆传媒的内容生态</h2>
+          <p>无论是三分钟的短剧、十天的纪录跟拍，还是一次认真的人物访谈，我们都愿意认真看完。官方投稿通道长期开放，期待你的创意与真实。</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button class="md-btn md-btn-main" id="mdSubmitBtn2" type="button">立即投稿</button>
+          <button class="md-btn md-btn-ghost" id="mdShareBtn" type="button">分享页面</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- S8 页脚 -->
+<footer class="md-footer">
+  <div class="md-foot-grid">
+    <div class="md-foot-brand">
+      <div class="md-logo" style="margin-bottom:8px;">
+        <span class="md-logo-mark">m</span>
+        <span>
+          <span class="md-logo-txt">m豆<span>传媒</span></span>
+          <span class="md-logo-sub">OFFICIAL VIDEO</span>
+        </span>
+      </div>
+      <p>m豆传媒官方网站，持续运营原创高清视频内容，围绕短剧、纪录影像与人物访谈构建多元内容生态，服务观众、创作者与合作企业。</p>
+    </div>
+    <div class="md-foot-col">
+      <h4>内容频道</h4>
+      <a href="#md-videos">精品内容</a>
+      <a href="#md-topics">专题企划</a>
+      <a href="#md-rank">口碑榜单</a>
+      <a href="#md-authors">创作者</a>
+    </div>
+    <div class="md-foot-col">
+      <h4>关于品牌</h4>
+      <a href="#md-parse">品牌解析</a>
+      <a href="#md-dynamic">企业动态</a>
+      <a href="#md-faq">帮助中心</a>
+      <a href="#md-top">返回首页</a>
+    </div>
+    <div class="md-foot-col">
+      <h4>参与共建</h4>
+      <a href="#md-faq">投稿入口</a>
+      <a href="#md-faq">创作者扶持</a>
+      <a href="#md-dynamic">合作品牌</a>
+      <a href="#md-faq">版权投诉</a>
+    </div>
+  </div>
+  <div class="md-foot-bottom">
+    <span>© 2026 m豆传媒 官方网站 · 版权所有 · 持续运营中</span>
+    <span>内容均为原创正版 · 高清免费观看 · 专注品质与口碑</span>
+  </div>
+</footer>
+
+<!-- 弹窗 -->
+<div class="md-modal" id="mdModal" role="dialog" aria-modal="true" aria-labelledby="mdModalTitle">
+  <div class="md-modal-box">
+    <button class="md-modal-close" id="mdModalClose" aria-label="关闭">×</button>
+    <h3 id="mdModalTitle">提示</h3>
+    <div id="mdModalBody"></div>
+  </div>
+</div>
+
+<div class="md-toast" id="mdToast">已复制</div>
+<button class="md-top" id="mdTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById('mdBurger');
+  var nav = document.getElementById('mdNav');
+  if(burger && nav){
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.textContent = open ? '✕' : '☰';
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 780){
+        nav.classList.remove('open');
+        burger.textContent = '☰';
+        burger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* ---------- Toast ---------- */
+  var toast = document.getElementById('mdToast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2100);
+  }
+
+  /* ---------- 搜索反馈 ---------- */
+  var form = document.getElementById('mdSearchForm');
+  var input = document.getElementById('mdSearchInput');
+  var wrap = document.getElementById('mdSearchWrap');
+  var hint = document.getElementById('mdSearchHint');
+  var searchMap = {
+    '短剧':'推荐《城市的一天》《加班的第七种理由》等 46 部短剧',
+    '城市':'《城市的一天》专题共 12 期，可完整回看',
+    '访谈':'《镜前十分钟》第一季 14 期已完结',
+    '手作':'手作系列共 9 支短片，含《一只杯子的三十道工序》',
+    '纪录':'纪录影像线 31 部作品，支持 1080P 高清观看',
+    '作者':'平台签约创作者 216 位，可在创作者板块查看',
+    '投稿':'投稿通道长期开放，短剧建议 3 至 8 分钟'
+  };
+  function doSearch(){
+    if(!input || !hint || !wrap) return;
+    var q = input.value.trim();
+    wrap.classList.add('active');
+    if(!q){
+      hint.textContent = '请输入关键词，例如「短剧」「城市」「访谈」';
+      return;
+    }
+    var hit = '';
+    Object.keys(searchMap).forEach(function(k){
+      if(q.indexOf(k) > -1 || k.indexOf(q) > -1){ hit = searchMap[k]; }
+    });
+    hint.textContent = hit ? '找到相关结果：' + hit : '暂未找到「' + q + '」的直接匹配，可尝试「短剧」「手作」或「访谈」';
+  }
+  if(form){
+    form.addEventListener('submit', function(e){ e.preventDefault(); doSearch(); });
+  }
+  if(input){
+    input.addEventListener('input', doSearch);
+    input.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+    });
+  }
+  document.addEventListener('click', function(e){
+    if(wrap && !wrap.contains(e.target)) wrap.classList.remove('active');
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.querySelectorAll('[data-like]').forEach(function(btn){
+    var countEl = btn.querySelector('[data-count]');
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('on');
+      if(countEl){
+        var n = parseInt(countEl.textContent.replace(/[^\d]/g,''),10) || 0;
+        n = on ? n + 1 : Math.max(0, n - 1);
+        countEl.textContent = n;
+      }
+      showToast(on ? '已点赞' : '已取消点赞');
+    });
+  });
+
+  document.querySelectorAll('[data-fav]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('on');
+      btn.innerHTML = on ? '★ 已收藏' : '☆ 收藏';
+      showToast(on ? '已加入收藏' : '已取消收藏');
+    });
+  });
+
+  /* ---------- 评论弹窗 ---------- */
+  document.querySelectorAll('[data-comment]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openModal('参与评论', 
+        '<p>写下你对这条内容的看法。平台鼓励具体、有信息量的评论，创作者会定期回复高赞留言。</p>' +
+        '<label for="mdCmt">你的评论</label>' +
+        '<textarea id="mdCmt" rows="4" placeholder="例如：这一段的环境声处理很舒服……"></textarea>' +
+        '<button class="md-btn md-btn-main" type="button" id="mdCmtSend" style="margin-top:14px;">提交评论</button>');
+      var send = document.getElementById('mdCmtSend');
+      if(send){
+        send.addEventListener('click', function(){
+          var v = document.getElementById('mdCmt');
+          if(v && v.value.trim().length < 5){
+            showToast('评论至少写 5 个字');
+            return;
+          }
+          closeModal();
+          showToast('评论已提交，审核后展示');
+        });
+      }
+    });
+  });
+
+  /* ---------- 作者简介弹窗 ---------- */
+  document.querySelectorAll('[data-author]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openModal('创作者简介', '<p>' + btn.getAttribute('data-author') + '</p>');
+    });
+  });
+
+  /* ---------- 复制链接 ---------- */
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var text = 'm豆传媒官方网站 · 城市的一天 · 免费观看专区';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){
+          showToast('内容标题已复制');
+        }).catch(function(){
+          showToast('复制失败，请手动选择');
+        });
+      }else{
+        showToast('内容标题已复制');
+      }
+    });
+  });
+
+  /* ---------- 投稿入口 ---------- */
+  function openSubmit(){
+    openModal('作品投稿',
+      '<p>请填写基本信息，编辑会在每周集中审看后与你联系。短剧建议 3 至 8 分钟，纪录影像不超过 45 分钟。</p>' +
+      '<label for="mdSubName">作品名称</label><input id="mdSubName" type="text" placeholder="例如：城市的一天 · 第三期">' +
+      '<label for="mdSubType">题材方向</label><input id="mdSubType" type="text" placeholder="短剧 / 纪录 / 访谈 / 生活影像">' +
+      '<label for="mdSubDesc">作品简介</label><textarea id="mdSubDesc" rows="3" placeholder="用两三句话说明内容与时长"></textarea>' +
+      '<button class="md-btn md-btn-main" type="button" id="mdSubSend" style="margin-top:14px;">提交投稿</button>');
+    var send = document.getElementById('mdSubSend');
+    if(send){
+      send.addEventListener('click', function(){
+        var n = document.getElementById('mdSubName');
+        if(n && n.value.trim().length < 2){
+          showToast('请填写作品名称');
+          return;
+        }
+        closeModal();
+        showToast('投稿已提交，感谢你的创意');
+      });
+    }
+  }
+  var sb1 = document.getElementById('mdSubmitBtn');
+  var sb2 = document.getElementById('mdSubmitBtn2');
+  if(sb1) sb1.addEventListener('click', openSubmit);
+  if(sb2) sb2.addEventListener('click', openSubmit);
+
+  /* ---------- 分享 ---------- */
+  var shareBtn = document.getElementById('mdShareBtn');
+  if(shareBtn){
+    shareBtn.addEventListener('click', function(){
+      openModal('分享页面',
+        '<p>把 m豆传媒官方网站分享给朋友，一起看原创高清内容。</p>' +
+        '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">' +
+        '<button class="md-btn md-btn-ghost" type="button" data-share="微信">微信</button>' +
+        '<button class="md-btn md-btn-ghost" type="button" data-share="微博">微博</button>' +
+        '<button class="md-btn md-btn-ghost" type="button" data-share="QQ">QQ</button>' +
+        '</div>');
+      document.querySelectorAll('[data-share]').forEach(function(b){
+        b.addEventListener('click', function(){
+          closeModal();
+          showToast('已生成' + b.getAttribute('data-share') + '分享提示');
+        });
+      });
+    });
+  }
+
+  /* ---------- 弹窗控制 ---------- */
+  var modal = document.getElementById('mdModal');
+  var modalTitle = document.getElementById('mdModalTitle');
+  var modalBody = document.getElementById('mdModalBody');
+  var modalClose = document.getElementById('mdModalClose');
+  function openModal(title, html){
+    if(!modal) return;
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    if(!modal) return;
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  if(modalClose) modalClose.addEventListener('click', closeModal);
+  if(modal){
+    modal.addEventListener('click', function(e){
+      if(e.target === modal) closeModal();
+    });
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('mdTop');
+  window.addEventListener('scroll', function(){
+    if(!topBtn) return;
+    if(window.scrollY > 420){ topBtn.classList.add('show'); }
+    else{ topBtn.classList.remove('show'); }
+  }, {passive:true});
+  if(topBtn){
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({ top:0, behavior:'smooth' });
+    });
+  }
+
+})();
+</script>
+</body>
+            </html>
